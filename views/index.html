@@ -1,62 +1,89 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<div id="map" class="container">
+<div class="container">
+    <div id="map"></div>
+    <div id="selections" class="container">
+        <form role="form" method="POST" id="top-right">
 
-</div>
-<div id="selections" class="container">
-    <form role="form" method="POST">
-        <label for="hotel">Hotels</label>
-        <br>
-        <select name="hotel">
-            {% for hotel in hotels %}
-            <option value="{{ hotel.name }}">{{ hotel.name }}</option>
-            {% endfor %}
-        </select>
-        <button> + </button>
-        <br>
-        <label for="restaurant">Restaurants</label>
-        <br>
-        <select name="restaurant">
-            {% for restaurant in restaurants %}
-            <option value="{{ restaurant.name }}">{{ restaurant.name }}</option>
-            {% endfor %}
-        </select>
-        <button> + </button>
-        <br>
-        <label for="activity">Activities</label>
-        <br>
-        <select name="activity">
-            {% for activity in activities %}
-            <option value="{{ activity.name }}">{{ activity.name }}</option>
-            {% endfor %}
-        </select>
-        <button> + </button>
-        <br>
-    </form>
-</div>
+            <div class="selects container">
+                <label for="hotel">Hotels</label>
+                <br>
+                <select name="hotel" class="form-control">
+                    {% for hotel in hotels %}
+                    <option value="{{ hotel.name }}">{{ hotel.name }}</option>
+                    {% endfor %}
+                </select>
+                <button type="button" class="btn btn-primary btn-sm plusbutton"> + </button>
+                <br>
+            </div>
+
+            <div class="selects container">
+                <label for="restaurant">Restaurants</label>
+                <br>
+                <select name="restaurant" class="form-control">
+                    {% for restaurant in restaurants %}
+                    <option value="{{ restaurant.name }}">{{ restaurant.name }}</option>
+                    {% endfor %}
+                </select>
+                <button type="button" class="btn btn-primary btn-sm plusbutton"> + </button>
+                <br>
+            </div>
+
+            <div class="selects container">
+                <label for="activity">Activities</label>
+                <br>
+                <select name="activity" class="form-control">
+                    {% for activity in activities %}
+                    <option value="{{ activity.name }}">{{ activity.name }}</option>
+                    {% endfor %}
+                </select>
+                <button type="button" class="btn btn-primary btn-sm plusbutton"> + </button>
+                <br>
+            </div>
+
+        </form>
+    </div>
+
 <div id="dayplanner" class="container">
-  <div>
-    <p> Day Planner </p>
-  </div>
-  <div>
-    <button id="day1"> 1 </button>
-    <button id="day2"> 2 </button>
-    <button id="day3"> 3 </button>
-  </div>
-  <div>
-    <h5></h5>
-    <p></p>
-    <button> X </button>
-
-    <h5></h5>
-    <p></p>
-    <button> X </button>
-
-    <h5></h5>
-    <p></p>
-    <button> X </button>
-  </div>
+    <div id="plannerheader">
+        <h3> Day Planner </h3>
+    </div>
+    <div>
+        <button type="button" class="btn btn-warning btn-sm daysbutton"> 1 </button>
+        <button type="button" class="btn btn-warning btn-sm daysbutton"> 2 </button>
+        <button type="button" class="btn btn-warning btn-sm daysbutton"> 3 </button>
+        <button type="button" class="btn btn-danger btn-sm daysbutton"> + </button>
+    </div>
+    <div>
+        <div>
+            <h5>My Hotel</h5>
+            <button type="button" class="btn btn-success btn-xs changebutton"> Change </button>
+            <ul class="planlist">
+                <li></li>
+            </ul>
+        </div>
+        <div>
+            <h5>My Restaurants</h5>
+            <button type="button" class="btn btn-success btn-xs changebutton"> Change </button>
+            <ul class="planlist">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div>
+            <h5>My Activities</h5>
+            <button type="button" class="btn btn-success btn-xs changebutton"> Change </button>
+            <ul class="planlist">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+    </div>
 </div>
+
 
 {% endblock %}

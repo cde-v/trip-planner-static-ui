@@ -104,24 +104,68 @@ footer {
     height: 70%;
     /* increases the carousel height so it looks good on phones */ } }
 
-.container {
-  /*border-radius: 10px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: blue;*/ }
+html {
+  color: white;
+  background-color: black; }
 
-select {
-  width: 100%; }
+.container {
+  width: 100%;
+  padding: 0; }
+
+.form-control {
+  width: 85%;
+  margin: 0;
+  float: left; }
+
+body {
+  background-color: #ccc; }
 
 #map {
+  box-sizing: border-box;
+  position: relative;
   float: left;
-  width: 65%;
-  height: 80vh; }
+  width: 70%;
+  min-height: 600px;
+  height: 100%;
+  border-right: 5px solid black;
+  border-bottom: 5px solid black; }
 
 #selections {
   width: 30%;
-  float: right; }
+  float: right;
+  border-bottom: 5px solid black; }
 
 #dayplanner {
   width: 30%;
+  float: right;
+  border-bottom: 5px solid black;
+  padding: 5px; }
+
+.plusbutton {
+  vertical-align: middle;
+  float: right;
+  margin-right: 1px; }
+
+.changebutton {
   float: right; }
+
+h5 {
+  margin: 0;
+  display: inline-block; }
+
+h3 {
+  margin: 0;
+  display: inline-block; }
+
+.planlist {
+  margin-top: 5px;
+  border-style: inset;
+  border-radius: 4px;
+  background-color: #fff; }
+
+.selects {
+  padding: 5px 5px; }
+
+#plannerheader {
+  text-align: center;
+  padding-bottom: 5px; }
