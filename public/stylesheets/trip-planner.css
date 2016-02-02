@@ -1,3 +1,4 @@
+/*@import "normalize";*/
 /* 
 Custom CSS for...
 'Modern Business' HTML Theme by Start Bootstrap
@@ -102,3 +103,25 @@ footer {
   .carousel {
     height: 70%;
     /* increases the carousel height so it looks good on phones */ } }
+
+.container {
+  /*border-radius: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: blue;*/ }
+
+select {
+  width: 100%; }
+
+#map {
+  float: left;
+  width: 65%;
+  height: 80vh; }
+
+#selections {
+  width: 30%;
+  float: right; }
+
+#dayplanner {
+  width: 30%;
+  float: right; }

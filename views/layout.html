@@ -1,1 +1,51 @@
 <!-- layout.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>TripPlanner</title>
+
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" >
+    <link href="/stylesheets/trip-planner.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-items">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">TripPlanner</a>
+        </div>
+        <div id="nav-items" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#">about</a></li>
+            <li><a href="#">contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container content">
+      {% block content %}{% endblock %}
+    </div>
+    <hr/>
+    <div id="footer" class="container text-muted">
+      TripPlanner by Hailey, John, Chris
+    </div>
+
+    <script src="/jquery/jquery.js"></script>
+    
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXAuUyG5eEwlioZFUz2nn5rA1gp4fsrHU"></script>
+
+    <script src="/scripts/gmaps.js"></script>
+
+  </body>
+</html>

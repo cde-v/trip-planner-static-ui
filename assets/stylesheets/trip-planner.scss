@@ -1,0 +1,33 @@
+/*@import "normalize";*/
+@import "modern-business";
+
+.container {
+  /*border-radius: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: blue;*/
+}
+
+select {
+  width: 100%;
+}
+
+body {
+
+}
+
+#map {
+  float: left;
+  width: 65%;
+  height: 80vh;
+}
+
+#selections {
+  width: 30%;
+  float: right;
+}
+
+#dayplanner {
+  width: 30%;
+  float: right;
+}

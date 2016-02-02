@@ -1,38 +1,62 @@
-<!DOCTYPE html>
+{% extends "layout.html" %}
 
 {% block content %}
-<html lang="en">
+<div id="map" class="container">
 
-<head>
-    <title>TripPlanner</title>
-    <!-- <link href="/public/stylesheets/style.css" rel="stylesheet"> -->
-</head>
+</div>
+<div id="selections" class="container">
+    <form role="form" method="POST">
+        <label for="hotel">Hotels</label>
+        <br>
+        <select name="hotel">
+            {% for hotel in hotels %}
+            <option value="{{ hotel.name }}">{{ hotel.name }}</option>
+            {% endfor %}
+        </select>
+        <button> + </button>
+        <br>
+        <label for="restaurant">Restaurants</label>
+        <br>
+        <select name="restaurant">
+            {% for restaurant in restaurants %}
+            <option value="{{ restaurant.name }}">{{ restaurant.name }}</option>
+            {% endfor %}
+        </select>
+        <button> + </button>
+        <br>
+        <label for="activity">Activities</label>
+        <br>
+        <select name="activity">
+            {% for activity in activities %}
+            <option value="{{ activity.name }}">{{ activity.name }}</option>
+            {% endfor %}
+        </select>
+        <button> + </button>
+        <br>
+    </form>
+</div>
+<div id="dayplanner" class="container">
+  <div>
+    <p> Day Planner </p>
+  </div>
+  <div>
+    <button id="day1"> 1 </button>
+    <button id="day2"> 2 </button>
+    <button id="day3"> 3 </button>
+  </div>
+  <div>
+    <h5></h5>
+    <p></p>
+    <button> X </button>
 
-<body>
-    <div>
-        <form role="form" method="POST">
-            <label for="hotel">Hotels</label>
-            <select name="hotel">
-                {% for hotel in hotels %}
-                <option value="{{ hotel.name }}">{{ hotel.name }}</option>
-                {% endfor %}
-            </select>
-            <label for="restaurant">Restaurants</label>
-            <select name="restaurant">
-                {% for restaurant in restaurants %}
-                <option value="{{ restaurant.name }}">{{ restaurant.name }}</option>
-                {% endfor %}
-            </select>
-            <label for="activity">Activities</label>
-            <select name="activity">
-                {% for activity in activities %}
-                <option value="{{ activity.name }}">{{ activity.name }}</option>
-                {% endfor %}
-            </select>
-        </form>
-    </div>
-</body>
+    <h5></h5>
+    <p></p>
+    <button> X </button>
 
-</html>
+    <h5></h5>
+    <p></p>
+    <button> X </button>
+  </div>
+</div>
 
 {% endblock %}
