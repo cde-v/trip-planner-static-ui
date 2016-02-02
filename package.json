@@ -1,0 +1,29 @@
+{
+  "name": "trip-planner-start",
+  "version": "0.0.0",
+  "description": "this is a cool trip planning app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass -w -r assets/stylesheets -o public/stylesheets",
+    "start": "npm run build-css & nodemon -e html,css,js app.js"
+  },
+  "author": "ayana@fullstackacademy.com",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.2.1",
+    "body-parser": "^1.14.2",
+    "bootstrap": "^3.3.6",
+    "express": "^4.13.4",
+    "jQuery": "^1.7.4",
+    "jquery": "^2.2.0",
+    "kerberos": "0.0.18",
+    "mongoose": "^4.3.7",
+    "morgan": "^1.6.1",
+    "swig": "^1.4.2"
+  },
+  "devDependencies": {
+    "node-sass": "^3.4.2",
+    "nodemon": "^1.8.1"
+  }
+}
